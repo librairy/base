@@ -1,0 +1,1 @@
+docker build -t librairy/document-db:1.0 .
