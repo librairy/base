@@ -129,3 +129,7 @@ create index on research.analyses (creationTime);
 create index on research.analyses (type);
 create index on research.analyses (configuration);
 create index on research.analyses (domain);
+
+create table if not exists research.filters(uri text, creationTime text, content text, primary key (uri));
+create index on research.filters (creationTime);
+create index on research.filters (content);
