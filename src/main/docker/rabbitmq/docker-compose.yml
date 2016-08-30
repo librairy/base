@@ -1,0 +1,23 @@
+version: "2"
+services:
+ event-bus:
+    container_name: event-bus
+    image: librairy/event-bus:latest
+    restart: always
+    volumes:
+      - ./eventBUS:/var/lib/rabbitmq
+    expose:
+      - "15672"
+      - "5672"
+    ports:
+      - "5040:15672"
+      - "5041:5672"
+    networks:
+      - "events"
+networks:
+  db:
+    external:
+      name: base_db
+  events:
+    external:
+      name: base_events

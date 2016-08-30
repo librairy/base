@@ -8,7 +8,7 @@ RUN mkdir -p -m 777 "$CATALINA_HOME"
 WORKDIR /usr/local
 
 #RUN apt-get update \
-#	&& apt-get install -y curl zip unzip
+#	&& apt-get install -y netcat
 
 #ENV HELENOS_URL http://freefr.dl.sourceforge.net/project/helenos-gui/Bundles/helenos-1.5-tomcat7_bundle.zip
 

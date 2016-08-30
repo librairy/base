@@ -1,0 +1,23 @@
+version: "2"
+services:
+ document-db:
+    container_name: document-db
+    image: librairy/document-db:latest
+    restart: always
+    volumes:
+      - ./documentDB:/usr/share/elasticsearch/data
+    expose:
+      - "9200"
+      - "9300"
+    ports:
+      - "5020:9200"
+      - "5021:9300"
+    networks:
+      - "db"
+networks:
+  db:
+    external:
+      name: base_db
+  events:
+    external:
+      name: base_events

@@ -1,0 +1,25 @@
+version: "2"
+services:
+ column-db:
+   container_name: column-db
+   image: librairy/column-db:latest
+   restart: always
+   volumes:
+     - ./columnDB:/var/lib/cassandra
+   expose:
+     - "8080"
+     - "9042"
+     - "9160"
+   ports:
+     - "5010:8080"
+     - "5011:9042"
+     - "5012:9160"
+   networks:
+     - "db"
+networks:
+  db:
+    external:
+      name: base_db
+  events:
+    external:
+      name: base_events

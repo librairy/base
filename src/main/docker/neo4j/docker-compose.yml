@@ -1,0 +1,21 @@
+version: "2"
+services:
+ graph-db:
+    container_name: graph-db
+    image: librairy/graph-db:latest
+    restart: always
+    volumes:
+      - ./graphDB:/data
+    expose:
+      - "7474"
+    ports:
+      - "5030:7474"
+    networks:
+      - "db"
+networks:
+  db:
+    external:
+      name: base_db
+  events:
+    external:
+      name: base_events

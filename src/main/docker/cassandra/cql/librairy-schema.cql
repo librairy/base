@@ -133,3 +133,8 @@ create index on research.analyses (domain);
 create table if not exists research.filters(uri text, creationTime text, content text, primary key (uri));
 create index on research.filters (creationTime);
 create index on research.filters (content);
+
+create table if not exists research.paths(uri text, creationTime text, start text, end text, primary key (uri));
+create index on research.paths (creationTime);
+create index on research.paths (start);
+create index on research.paths (end);
