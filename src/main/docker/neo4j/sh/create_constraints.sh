@@ -12,5 +12,8 @@ do
         echo "librairy constraints loaded"
         break
   fi
-
+  if [ "$STATUS" = "ON (bundles:BUNDLES) ASSERT bundles.uri IS UNIQUE" ]; then
+        echo "constraints previously loaded"
+        break
+  fi
 done
