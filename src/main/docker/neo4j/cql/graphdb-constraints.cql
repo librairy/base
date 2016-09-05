@@ -1,0 +1,2 @@
+CREATE CONSTRAINT ON (node:Source) ASSERT node.uri IS UNIQUE;
+CREATE CONSTRAINT ON (node:Domain) ASSERT node.uri IS UNIQUE;
