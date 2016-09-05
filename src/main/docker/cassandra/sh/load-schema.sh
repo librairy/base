@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
-while : ;do
+for i in {1..15}
+do
   sleep 5;
   echo "checking cassandra status"
   # Get the status of this machine from the Cassandra nodetool

@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
-while : ;do
+for i in {1..15}
+do
   sleep 5;
   echo "checking neo4j status"
   STATUS=`/var/lib/neo4j/bin/neo4j-shell -c "schema" | tail -1`
