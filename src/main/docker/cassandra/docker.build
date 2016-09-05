@@ -1,1 +1,2 @@
-docker build -t librairy/column-db:1.2 .
+docker build -t librairy/column-db:1.3 .
+docker build -t librairy/column-db:latest .

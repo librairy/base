@@ -2,7 +2,7 @@ version: "2"
 services:
  column-db:
    container_name: column-db
-   image: librairy/column-db:1.0
+   image: librairy/column-db:1.2
    restart: always
    volumes:
      - ./column-db:/var/lib/cassandra
