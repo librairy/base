@@ -1,4 +1,4 @@
-FROM neo4j:2.3.1
+FROM neo4j:2.3.6
 MAINTAINER Librairy <librairy.framework@gmail.com>
 
 ADD conf/ /conf
