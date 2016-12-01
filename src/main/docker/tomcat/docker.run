@@ -1,0 +1,2 @@
+docker run -it --rm --name tomcat librairy/tomcat:latest
+# docker run -d --restart=always --name tomcat librairy/tomcat:latest

@@ -23,6 +23,12 @@ COPY cql/*.cql /tmp/
 COPY sh/*.sh /usr/local/bin/
 RUN chmod +x /usr/local/bin/*.sh
 
+COPY limits.conf /limits.conf
+RUN cat /limits.conf | tee -a /etc/security/limits.conf
+
+COPY settings.conf /settings.conf
+RUN cat /settings.conf | tee -a /etc/sysctl.conf
+
 COPY custom-entrypoint.sh /custom-entrypoint.sh
 ENTRYPOINT ["/custom-entrypoint.sh"]
 
