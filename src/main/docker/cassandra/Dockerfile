@@ -29,6 +29,8 @@ RUN cat /limits.conf | tee -a /etc/security/limits.conf
 COPY settings.conf /settings.conf
 RUN cat /settings.conf | tee -a /etc/sysctl.conf
 
+RUN sed "s/cassandra  -  nproc    10000/cassandra  -  nproc    32768/g" /etc/security/limits.d/cassandra.conf
+
 COPY custom-entrypoint.sh /custom-entrypoint.sh
 ENTRYPOINT ["/custom-entrypoint.sh"]
 
