@@ -12,6 +12,8 @@ create index on research.sources (protocol);
 create index on research.sources (url);
 create index on research.sources (domain);
 
+create table if not exists research.counts(num counter, name varchar, primary key(name));
+
 create table if not exists research.contains(id bigint, uri text, creationTime text, startUri text, endUri text, weight double, primary key (uri));
 create index on research.contains (startUri);
 create index on research.contains (endUri);

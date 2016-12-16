@@ -1,2 +1,2 @@
-docker push librairy/column-db:1.5
+docker push librairy/column-db:1.6
 docker push librairy/column-db:latest
